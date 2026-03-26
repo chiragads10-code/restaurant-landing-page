@@ -1,0 +1,124 @@
+{
+  "theme": "Light",
+  "archetype": "Organic & Earthy",
+  "mood": "Professional, trustworthy, hospitable yet tech-forward. Grounded like a restaurant, precise like AI.",
+  "colors": {
+    "background": "#F9F8F6",
+    "surface": "#FFFFFF",
+    "surface_glass": "rgba(255, 255, 255, 0.7)",
+    "primary": "#4A5D23",
+    "primary_hover": "#3C4A1C",
+    "accent": "#E07A5F",
+    "text_main": "#1A1A1A",
+    "text_muted": "#5C5C5C",
+    "border": "#E5E3DB",
+    "forbidden_colors": ["#1B93A4", "#9D4CDD", "#7351B7"]
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Inter",
+    "forbidden_fonts": ["Space Grotesk"],
+    "scale": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter font-bold",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-semibold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium",
+      "body": "text-base leading-relaxed",
+      "overline": "text-xs tracking-[0.2em] uppercase font-semibold"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing. Use p-8, p-12, p-16, py-24, py-32 to create breathing room.",
+    "grid_bento": "Mode A: The Tetris Grid. Mix col-span-1 and col-span-2 in grid-cols-1 md:grid-cols-2 lg:grid-cols-3 to create asymmetrical, engaging bento layouts.",
+    "container_padding": "Containers with borders MUST have generous internal padding (p-8 or p-12) to prevent text collision."
+  },
+  "surface_strategies": {
+    "header": "Crystal Glassmorphism: backdrop-blur-xl bg-[#F9F8F6]/80 with a delicate border-b border-[#E5E3DB]/50.",
+    "cards": "Neumorphism & Crisp: Flat white surface (#FFFFFF), 1px border (#E5E3DB), soft diffuse shadow (shadow-sm). Hover state adds slight lift (-translate-y-1) and shadow-md.",
+    "footer": "Contrast Shift: Dark surface (e.g., bg-[#1A1A1A]) with massive padding (py-32)."
+  },
+  "motion_and_interaction": {
+    "hover_states": "All buttons must explicitly shift bg and text colors. Cards should subtly elevate.",
+    "scroll": "Implement smooth scroll behavior. Sections should gently fade-in-up.",
+    "data_testid": "CRITICAL: All interactive elements (buttons, inputs, accordions, links) MUST include a kebab-case data-testid attribute describing their role (e.g., data-testid='hero-cta-button')."
+  },
+  "component_guidelines": {
+    "buttons": "Shadcn based but rounded-md or rounded-full. Primary uses #4A5D23. Accent uses #E07A5F.",
+    "forms": "Use Shadcn Input, Select. Never native HTML inputs.",
+    "accordion": "Use Shadcn Accordion for FAQs. Enhance with custom open/close styling.",
+    "icons": "Use lucide-react. Stroke-width 1.5 for elegance."
+  },
+  "page_sections": [
+    {
+      "name": "Navigation",
+      "layout": "Sticky header, flex space-between, z-50. Left: Logo. Right: Links and 'Book a Call' CTA button.",
+      "visuals": "Crystal glassmorphism."
+    },
+    {
+      "name": "Hero",
+      "layout": "Bento layout or bold asymmetrical split. Large animated stats ('₹27L+ lost annually', '83% callers never call back').",
+      "visuals": "Incorporate hero_image subtly (perhaps as a split column or within a large bento card). Do not use full-screen heavy overlay. Keep the text area crisp and readable."
+    },
+    {
+      "name": "VSL Video Placeholder",
+      "layout": "Central container, max-w-4xl mx-auto, aspect-video.",
+      "visuals": "Rounded corners, dark background or image background with a large Play icon. Subtle pulse animation on play button."
+    },
+    {
+      "name": "Pain Points Grid",
+      "layout": "Tetris Bento grid (grid-cols-1 md:grid-cols-2 lg:grid-cols-4).",
+      "visuals": "Cards for Missed calls, No-shows, Staff on phone, No repeat visits. Use earthy accent colors for card backgrounds (e.g., bg-[#E07A5F]/10) and primary color for icons."
+    },
+    {
+      "name": "Proof / Stats Row",
+      "layout": "Full width band. Large typography.",
+      "visuals": "Include a massive quote in 'heading_font' and prominent stat ('90 days results')."
+    },
+    {
+      "name": "How It Works (Timeline)",
+      "layout": "4-step timeline. Can be a vertical stack of interlocking cards or an elegant horizontal flow.",
+      "visuals": "Use 'Tracing Beam' inspired connections (a vertical or horizontal line that links the steps). Include chef_cooking image alongside."
+    },
+    {
+      "name": "Deliverables Grid",
+      "layout": "Grid-cols-1 md:grid-cols-3 gap-6. 6 cards total.",
+      "visuals": "Clean, crisp cards. Titles: AI Voice Assistant, WhatsApp Bot, No-Show Prevention, Dashboard, Follow-up, Integration. Use lucide icons."
+    },
+    {
+      "name": "Booking Section",
+      "layout": "Split layout. Left: Checklist of benefits. Right: Calendly placeholder.",
+      "visuals": "Calendly placeholder is a pristine white card with Shadcn inputs resembling a calendar and time-slot selection form."
+    },
+    {
+      "name": "FAQ",
+      "layout": "Narrow container (max-w-2xl).",
+      "visuals": "Shadcn accordion with a clean border-bottom for each item."
+    },
+    {
+      "name": "Final CTA",
+      "layout": "Massive container, py-32. Centered alignment.",
+      "visuals": "Background: bg-primary (#4A5D23). Text: White. Large headline, secondary text, and a prominent 'Book a Call' button in Accent color."
+    },
+    {
+      "name": "Footer",
+      "layout": "Grid layout for links, py-20.",
+      "visuals": "Dark background (#1A1A1A) with light text. Large text element ('Sadafal Tech') at the bottom."
+    }
+  ],
+  "media": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1752440475163-4fe0558b1f38?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxidXN0bGluZyUyMHJlc3RhdXJhbnQlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NzQ0OTkwMzB8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Bustling restaurant interior",
+      "placement": "Hero section bento card or subtle background element"
+    },
+    "chef_cooking": {
+      "url": "https://images.unsplash.com/photo-1717838207789-62684e75a770?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwY2hlZiUyMGNvb2tpbmd8ZW58MHx8fHwxNzc0NDk5MDMxfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Chef preparing food",
+      "placement": "Alongside 'How it works' timeline or proof section"
+    },
+    "owner_smiling": {
+      "url": "https://images.unsplash.com/photo-1753351055056-d612233d8036?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxjYWZlJTIwb3duZXIlMjBzbWlsaW5nfGVufDB8fHx8MTc3NDQ5OTAzMnww&ixlib=rb-4.1.0&q=85",
+      "alt": "Restaurant owners confidently pose",
+      "placement": "Next to the final CTA or booking section"
+    }
+  }
+}
