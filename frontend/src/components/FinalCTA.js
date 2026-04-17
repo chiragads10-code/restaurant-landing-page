@@ -21,7 +21,7 @@ export default function FinalCTA() {
         <a href="#book">
           <Button
             data-testid="final-cta-button"
-            className="rounded-full bg-[#E07A5F] hover:bg-[#c96a50] text-white font-semibold text-lg px-10 py-5 h-auto transition-all hover:scale-[1.03] shadow-lg shadow-[#E07A5F]/30"
+            className="rounded-full bg-[#E07A5F] hover:bg-[#c96a50] text-white font-semibold text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 h-auto transition-all hover:scale-[1.03] shadow-lg shadow-[#E07A5F]/30 max-w-full"
           >
             Yes, I Want to Grow My Restaurant
             <ArrowRight className="w-5 h-5 ml-2" />
