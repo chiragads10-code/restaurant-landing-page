@@ -1,7 +1,7 @@
-import { Check, ArrowRight, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+import { Check, Clock } from "lucide-react";
 
-const CALENDLY_URL = "https://sadafaltech.com/book-a-call";
+const CALENDLY_URL = "https://calendly.com/sadafaltech/30min";
 
 const CHECKLIST = [
   "Discover your exact monthly revenue leak from missed calls",
@@ -11,6 +11,16 @@ const CHECKLIST = [
 ];
 
 export default function BookingSection() {
+  useEffect(() => {
+    // Load Calendly widget script
+    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <section
       id="book"
@@ -55,37 +65,16 @@ export default function BookingSection() {
           </div>
         </div>
 
-        {/* Right side — Calendly CTA card */}
-        <div className="bg-white border border-[#E5E3DB] rounded-2xl p-8 sm:p-10 shadow-sm text-center flex flex-col items-center justify-center min-h-[420px]">
-          <div className="w-16 h-16 rounded-2xl bg-[#E07A5F]/10 flex items-center justify-center mb-6">
-            <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
-              <rect x="12" y="14" width="24" height="22" rx="3" stroke="#E07A5F" strokeWidth="1.5" fill="none"/>
-              <line x1="12" y1="20" x2="36" y2="20" stroke="#E07A5F" strokeWidth="1.5"/>
-              <line x1="18" y1="10" x2="18" y2="17" stroke="#E07A5F" strokeWidth="1.5" strokeLinecap="round"/>
-              <line x1="30" y1="10" x2="30" y2="17" stroke="#E07A5F" strokeWidth="1.5" strokeLinecap="round"/>
-              <circle cx="20" cy="28" r="2" fill="#E07A5F"/>
-              <circle cx="24" cy="28" r="2" fill="#E07A5F"/>
-              <circle cx="28" cy="28" r="2" fill="#E07A5F"/>
-            </svg>
-          </div>
-          <h3 className="text-2xl font-bold text-[#1A1A1A] tracking-tight mb-2">
-            Book Your Free 30-Min Strategy Call
-          </h3>
-          <p className="text-sm text-[#5C5C5C] max-w-[280px] mb-6">
-            Pick a time that works for you. We'll map your restaurant's growth plan — no strings attached.
-          </p>
-          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-            <Button
-              data-testid="booking-cta-button"
-              className="rounded-full bg-[#E07A5F] hover:bg-[#c96a50] text-white font-semibold text-base px-8 py-4 h-auto transition-all hover:scale-[1.03] shadow-lg shadow-[#E07A5F]/20"
-            >
-              Book My Free Strategy Call
-              <ArrowRight className="w-4 h-4 ml-1.5" />
-            </Button>
-          </a>
-          <p className="text-xs text-[#5C5C5C] mt-4">
-            No pitch. No pressure. Just a plan.
-          </p>
+        {/* Right side — Calendly Widget */}
+        <div
+          data-testid="calendly-widget-container"
+          className="bg-white border border-[#E5E3DB] rounded-2xl overflow-hidden shadow-sm min-h-[680px]"
+        >
+          <div
+            className="calendly-inline-widget"
+            data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=ffffff&text_color=1a1a1a&primary_color=4A5D23`}
+            style={{ minWidth: "280px", width: "100%", height: "680px" }}
+          />
         </div>
       </div>
     </section>

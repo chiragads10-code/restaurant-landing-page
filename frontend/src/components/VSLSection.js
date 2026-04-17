@@ -1,7 +1,7 @@
 import { ArrowRight, Check, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const CALENDLY_URL = "https://sadafaltech.com/book-a-call";
+const CALENDLY_URL = "#book";
 
 export default function VSLSection() {
   return (
@@ -15,7 +15,7 @@ export default function VSLSection() {
           <p className="text-sm text-[#5C5C5C] max-w-[420px] mx-auto mb-6">
             Book a free 30-minute strategy call. We'll show you exactly where your restaurant is leaking revenue — and how to fix it.
           </p>
-          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+          <a href={CALENDLY_URL}>
             <Button
               data-testid="vsl-cta-button"
               className="rounded-full bg-[#4A5D23] hover:bg-[#3C4A1C] text-white font-semibold text-base px-8 py-3.5 h-auto transition-all hover:scale-[1.03]"

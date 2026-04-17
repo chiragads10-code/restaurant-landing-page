@@ -1,7 +1,7 @@
 import { ArrowRight, Play, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const CALENDLY_URL = "https://sadafaltech.com/book-a-call";
+const CALENDLY_URL = "#book";
 
 export default function Hero() {
   return (
@@ -60,7 +60,7 @@ export default function Hero() {
 
       {/* CTA */}
       <div className="animate-fade-up-3">
-        <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+        <a href={CALENDLY_URL}>
           <Button
             data-testid="hero-cta-button"
             className="rounded-full bg-[#E07A5F] hover:bg-[#c96a50] text-white font-semibold text-base px-8 py-4 h-auto transition-all hover:scale-[1.03] shadow-lg shadow-[#E07A5F]/20"

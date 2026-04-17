@@ -18,7 +18,7 @@ export default function FinalCTA() {
         <p className="text-base text-white/65 max-w-[520px] mx-auto mb-9 leading-relaxed">
           Your competitors are already moving. The restaurants that win in the next 2 years will be the ones who automate first. Book your free strategy call now.
         </p>
-        <a href="https://sadafaltech.com/book-a-call" target="_blank" rel="noopener noreferrer">
+        <a href="#book">
           <Button
             data-testid="final-cta-button"
             className="rounded-full bg-[#E07A5F] hover:bg-[#c96a50] text-white font-semibold text-lg px-10 py-5 h-auto transition-all hover:scale-[1.03] shadow-lg shadow-[#E07A5F]/30"

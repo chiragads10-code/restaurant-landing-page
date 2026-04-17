@@ -37,7 +37,7 @@ export default function Navigation() {
               {link.label}
             </a>
           ))}
-          <a href="https://sadafaltech.com/book-a-call" target="_blank" rel="noopener noreferrer" data-testid="nav-cta-button">
+          <a href="#book" data-testid="nav-cta-button">
             <Button className="rounded-full bg-[#4A5D23] hover:bg-[#3C4A1C] text-white font-semibold text-sm px-6 py-2.5 h-auto transition-all hover:scale-[1.03]">
               Book Free Strategy Call
               <ArrowRight className="w-4 h-4 ml-1" />
@@ -68,7 +68,7 @@ export default function Navigation() {
               {link.label}
             </a>
           ))}
-          <a href="https://sadafaltech.com/book-a-call" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
+          <a href="#book" onClick={() => setMobileOpen(false)}>
             <Button className="w-full rounded-full bg-[#4A5D23] hover:bg-[#3C4A1C] text-white font-semibold text-sm px-6 py-2.5 h-auto">
               Book Free Strategy Call <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
