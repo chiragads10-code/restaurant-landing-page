@@ -17,7 +17,9 @@ Build a high-converting landing page for Sadafal Tech, an AI-powered restaurant 
 ## What's Been Implemented (Dec 2025)
 - Full landing page with 11 sections: Nav, Hero+VSL, CTA box, Pain Points, Proof, How It Works, Deliverables, Booking, FAQ, Final CTA, Footer
 - Backend API for booking storage (MongoDB) — POST/GET /api/bookings
-- All CTAs link to https://sadafaltech.com/book-a-call (target=_blank)
+- Calendly widget embedded inline (https://calendly.com/sadafaltech/30min) in booking section
+- All CTAs scroll to #book section with Calendly widget
+- Floating WhatsApp chat button (+91 9879113429) with prefilled message
 - Responsive design with mobile hamburger menu
 - Shadcn Accordion for FAQ, Shadcn Button/Input components
 - Cormorant Garamond + Manrope typography
